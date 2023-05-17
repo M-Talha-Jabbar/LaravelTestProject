@@ -11,6 +11,11 @@ class Account extends Model
 
     protected $primaryKey = 'user_id';
 
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
+
     public function subscriptions()
     {
         return $this->hasMany(Subscription::class, 'user_id');

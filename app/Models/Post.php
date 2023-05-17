@@ -11,9 +11,9 @@ class Post extends Model
 
     protected $primaryKey = 'post_id';
 
-    public function user()
+    public function account()
     {
-        return $this->belongsTo(User::class, 'user_id');
+        return $this->belongsTo(Account::class, 'user_id');
     }
 
     public function website()

@@ -11,6 +11,11 @@ class Website extends Model
 
     protected $primaryKey = 'web_id';
 
+    public function posts()
+    {
+        return $this->hasMany(Post::class, 'web_id');
+    }
+
     public function subscriptions()
     {
         return $this->hasMany(Subscription::class, 'web_id');
