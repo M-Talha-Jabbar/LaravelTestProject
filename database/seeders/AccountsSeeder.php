@@ -15,11 +15,13 @@ class AccountsSeeder extends Seeder
     public function run()
     {
         Account::create([
-            'username' => 'JohnDoe',
+            'username' => 'TalhaJabbar',
+            'email' => 'muhammadtalha61940@gmail.com',
         ]);
 
         Account::create([
-            'username' => 'JaneSmith',
+            'username' => 'HuzaifaJabbar',
+            'email' => 'muhammadhuzaifa@gmail.com'
         ]);
     }
 }

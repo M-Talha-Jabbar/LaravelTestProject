@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Website;
 use App\Models\Account;
+use App\Events\NewPostPublished;
 
 class PostController extends Controller
 {
@@ -23,6 +24,8 @@ class PostController extends Controller
         $post->user_id = $validatedData['user_id'];
 
         $website->posts()->save($post);
+
+        event(new NewPostPublished($post));
 
         return response()->json(['message' => 'Post created successfully'], 201);
     }
