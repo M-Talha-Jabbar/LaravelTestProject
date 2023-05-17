@@ -16,7 +16,7 @@ class AccountsSeeder extends Seeder
     {
         Account::create([
             'username' => 'TalhaJabbar',
-            'email' => 'muhammadtalha61940@gmail.com',
+            'email' => 'muhammadtalha11126@gmail.com',
         ]);
 
         Account::create([

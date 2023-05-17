@@ -31,6 +31,6 @@ class PostNotification extends Mailable
      */
     public function build()
     {
-        return $this->view('email.post_notification', ['post' => $this->post]);
+        return $this->view('emails.post_notification', ['post' => $this->post]);
     }
 }
