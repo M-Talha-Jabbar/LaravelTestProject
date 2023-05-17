@@ -10,8 +10,9 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 use App\Models\Post;
+use Illuminate\Contracts\Queue\ShouldQueue;
 
-class NewPostPublished
+class NewPostPublished implements ShouldQueue
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 

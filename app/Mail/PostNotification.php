@@ -13,6 +13,7 @@ class PostNotification extends Mailable
     use Queueable, SerializesModels;
 
     public $post;
+    public $email;
 
     /**
      * Create a new message instance.
